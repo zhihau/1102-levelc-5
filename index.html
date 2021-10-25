@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>書曼的旅遊相簿</title>
+    <style>
+        * {
+            background-color: #333333;
+            box-sizing: border-box;
+            margin: 0px;
+        }
+/* main */
+        .main {
+            width: 1024px;
+            height: 768px;
+            background-color: #FFFFCC;
+            display: flex;
+        }
+/* menu */
+        .menu {
+            flex-basis: 150px;
+            /* height: 100%; */
+            color: blue;
+            background-color: chartreuse;
+        }
+        .menu table{
+            border: 0px;
+            text-align: center;
+            background-color: white;
+        }
+        .jinmen,.mazu,.ponghu,.ludao,.lanyu,.go-home{
+            position: relative;
+            display: inline-block;
+            /* margin: 50px; */
+            width: 120px;
+            height: 30px;
+        }
+        .jinmen .jinmen-front,.mazu .mazu-front,.ponghu .ponghu-front,.ludao .ludao-front,.lanyu .lanyu-front,.go-home-front{
+            display: none;
+            position: absolute;
+            top:0;
+            left: 0;
+            z-index: 99;
+        }
+        .jinmen:hover .jinmen-front,.mazu:hover .mazu-front,.ponghu:hover .ponghu-front,.ludao:hover .ludao-front,.lanyu:hover .lanyu-front,.go-home:hover .go-home-front{
+            display: inline;
+        }
+        .info{
+            font-size: 12px;
+            font-weight: bolder;
+            font-family: "新細明體";
+            color:#ff0000;
+            text-align: center;
+        }
+/* section */
+        .section {
+            flex-basis: calc(100% - 150px);
+            /* height: 100%; */
+            color: blue;
+            background-color: coral;
+        }
+/* section .marquee*/
+        .marquee {
+            /* color: blue; */
+            /* background-color: cornflowerblue; */
+            height: 50px;
+            padding: 0px;
+            overflow: hidden;
+            font-size: 24px;
+            font-family: "標楷體";
+            font-weight: bolder;
+            color: #ff0000;
+            text-align: center;
+            vertical-align: middle;
+        }
+/* section .content*/
+        .content {
+            height: calc(100% - 50px);
+            color: blue;
+            background-color: crimson;
+        }
+    </style>
+</head>
+
+<body class="main">
+    
+    <menu class="menu">
+
+        <table>
+            <tr>
+                <td>
+                </td>
+                <!-- 1 -->
+            </tr>
+            <tr>
+                <td><img src="./images/0507.jpg" width="120px" height="120px" alt="書曼"></td>
+                <!-- 2 -->
+            </tr>
+            <tr>
+                <td></td>
+                <!-- 3 -->
+            </tr>
+            <tr>
+                <td class="jinmen"><img src="./images/0501b.gif" alt="金門逍
+                    遙遊">
+                    <img src="./images/0501r.gif" alt="" class="jinmen-front">
+                </td>
+                <!-- 4 -->
+            </tr>
+            <tr>
+                <td class="mazu">
+                    <img src="./images/0502b.gif" alt="卡蹓到
+                    馬祖">
+                    <img src="./images/0502r.gif" alt="" class="mazu-front">
+                </td>
+                <!-- 5 -->
+            </tr>
+            <tr>
+                <td class="ponghu">
+                    <img src="./images/0503b.gif" alt="踏浪澎
+                    湖行">
+                    <img src="./images/0503r.gif" alt="" class="ponghu-front">
+                </td>
+                <!-- 6 -->
+            </tr>
+            <tr>
+                <td class="ludao">
+                    <img src="./images/0504b.gif" alt="綠島唱夜曲">
+                    <img src="./images/0504r.gif" alt="" class="ludao-front">
+                </td>
+                <!-- 7 -->
+            </tr>
+            <tr>
+                <td class="lanyu">
+                    <a href="./album.html" target="MyFrame">
+                    <img src="./images/0505b.gif" alt="蘭嶼賞魚去">
+                    <img src="./images/0505r.gif" alt="" class="lanyu-front">
+                </a>
+                </td>
+                <!-- 8 -->
+            </tr>
+            <tr>
+                <td></td>
+                <!-- 9 -->
+            </tr>
+            <tr>
+                <td class="info">
+                    日期：2021/10/25
+                    維護：23許志浩
+                </td>
+                <!-- 10 -->
+            </tr>
+            <tr>
+                <td></td>
+                <!-- 11 -->
+            </tr>
+            <tr>
+                <td class="go-home">
+                    <a href="./index.html">
+                    <img src="./images/0506b.gif" alt="回首
+                    頁">
+                    <img src="./images/0506r.gif" alt="" class="go-home-front">
+                </a>
+                </td>
+                <!-- 12 -->
+            </tr>
+        </table>
+    </menu>
+    <section class="section">
+        
+        <header class="marquee">
+
+            <marquee behavior="" direction="left">歡迎來到書曼的旅遊
+                相簿，本網站有我的旅遊影像紀錄介紹耶！</marquee>
+        </header>
+        <iframe  class="content" src="./album1.html" name="MyFrame" frameborder="0"></iframe>
+        <!-- <main class="content">
+
+            content
+        </main> -->
+    </section>
+</body>
+
+</html>
